@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Lato';
+    src:url('fonts/Lato/Lato-Light.ttf') format('truetype');
+} 
+body {
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+}
+.logo { 
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: normal;
+} 
+.msg {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+} 
+.listofmixes { 
+    float: left;
+    height: 100px;
+    width: 16%;
+    margin: 1em; 
+    font-size: 11px;
+} 
+.listofmixes a {
+    text-decoration: none;
+}
+.listofmixes img {
+    border-radius: 4px;
+} 

@@ -1,0 +1,25 @@
+<!-- Header -->
+<ion-header-bar align-title="left" class="bar-energized">
+    <h1 class="title logo">[ AnguMix ]</h1>
+    <div class="buttons">
+        <button ng-click="vm.toggleSearch()" class="button">
+            <i class="button button-icon ion-ios-close-outline" ng-class="{'ion-ios-search': !vm.searchField}"></i>
+        </button>
+        <div ng-show="vm.searchField" class="item-input-inset">
+            <div class="item-input-wrapper"> 
+                <input type="text" ng-model="vm.searchgenre" placeholder="Search for genres">
+                <i ng-show="vm.searchgenre" class="button button-icon ion-backspace" ng-click="vm.clearFilters()"></i>
+            </div>
+        </div>
+    </div>
+</ion-header-bar>
+
+<!-- Content -->
+<ion-content>
+    <div class="msg">Select genre</div>
+    <ul class="list">
+        <li class="item" ng-repeat="genre in vm.genres.data | filter:vm.searchgenre" ng-model="listofcat" ng-click="vm.selectGenre(genre.slug)">
+            {{genre.name}}
+        </li>
+    </ul> 
+</ion-content>

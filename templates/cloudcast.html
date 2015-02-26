@@ -1,0 +1,28 @@
+<ion-header-bar align-title="left" class="bar-energized">
+    <h1 class="title logo">[ AnguMix ]</h1>
+    <div class="button">
+        <i ng-click="vm.goBack()" class="button button-icon ion-ios-arrow-left"> Back</i>
+    </div>
+</ion-header-bar>
+
+<ion-content>
+    <ul class="list">
+        <li class="item"><strong>Name</strong>: {{vm.cloudcast.name}}</li> 
+        <li class="item"><strong>User</strong>: {{vm.cloudcast.user.username}}</li>  
+        <li class="item"><strong>Total Plays</strong>: {{vm.cloudcast.play_count}}</li>
+        <li class="item"><strong>Tags</strong>:
+            <span ng-repeat="cl in vm.cloudcast.tags">
+                {{cl.name}}, 
+            </span>
+        </li>
+        <li class="item"><strong>Likes</strong>: {{vm.cloudcast.favorite_count}}</li>
+        <li class="item"><strong>Duration</strong>: {{(vm.cloudcast.audio_length/60) | number:0}} m.</li>
+    </ul>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="player">
+            <iframe ng-src="{{vm.trustSrc()}}" frameborder="0"></iframe>
+        </div>
+    </div>
+</ion-content> 

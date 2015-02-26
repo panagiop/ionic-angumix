@@ -1,0 +1,26 @@
+<ion-header-bar align-title="left" class="bar-energized">
+    <h1 class="title logo"><a ui-sref="home">[ AnguMix ]</a></h1>
+    <div class="button">
+        <i ng-click="vm.goBack()" class="button button-icon ion-ios-arrow-left"> Back</i>
+    </div>
+</ion-header-bar>
+
+<ion-content>
+    <div class="list">
+        <div class="msg">Select one of the following</div>
+        <label class="item item-radio" ng-repeat="tag in vm.tagsFilters" ng-model="resultsbyfilter.selected" ng-click="vm.selectFilter(vm.selectedgenre, tag.name)">
+            <input type="radio" name="group">
+            <div class="item-content">
+                {{tag.alias}}
+            </div>
+            <i class="radio-icon ion-ios-checkmark-outline"></i>
+        </label>
+    </div>
+    <ul class="msg">
+        <li class="listofmixes" ng-repeat="res in vm.resultsbyfilter.data">
+            <a ui-sref="cloudcast({genre: vm.selectedgenre, username: res.user.username, slug: res.slug})">
+                <p>{{res.user.name}}</p><img ng-src="{{res.user.pictures.thumbnail}}">
+            </a>
+        </li>
+    </ul>
+</ion-content>

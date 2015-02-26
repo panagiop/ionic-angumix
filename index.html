@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css">
+<!--     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ -->
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) 
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>-->
+    <script src="cordova.js"></script> 
+
+    <!--services files -->
+    <script src="js/common/services.js"></script>
+
+    <!-- list of genres -->
+    <script src="js/app.js"></script>
+    <script src="js/modules/genreslist/states.js"></script>
+    <script src="js/modules/genreslist/controllers.js"></script>
+
+    <!-- filters (popular, new etc) -->
+    <script src="js/modules/genrefilters/controllers.js"></script>
+    <script src="js/modules/genrefilters/states.js"></script>    
+
+    <!-- player for the selected mix -->
+    <script src="js/modules/player/controllers.js"></script>
+    <script src="js/modules/player/states.js"></script> 
+
+  </head>
+  <body ng-app="starter">
+    <ion-nav-view animation="slide-left-right"></ion-nav-view>
+  </body>
+</html>
