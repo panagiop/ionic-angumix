@@ -2,7 +2,7 @@
 
 var cloudcast = angular.module('cloudcast', []);
 
-function cloudcastController($scope, $http, $state, $stateParams, $sce, fetchData) {
+function cloudcastController($state, $stateParams, $sce, fetchData) {
 	var that = this;
 
 	fetchData.getDataFromUrl('http://api.mixcloud.com/' + $stateParams.username + '/' + $stateParams.slug + '/?callback=JSON_CALLBACK').then(function(d4) {

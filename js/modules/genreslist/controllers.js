@@ -2,7 +2,7 @@
 
 var genreList = angular.module('genreList', []);
 
-function genreListController($scope, $http, $state, fetchData) {
+function genreListController($scope, $state, fetchData) {
     var that = this; 
 
     this.searchField = false;

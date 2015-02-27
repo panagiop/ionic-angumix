@@ -2,7 +2,7 @@
 
 var genreFilters = angular.module('genreFilters', []);
 
-function genreFiltersController($scope, $http, $stateParams, $state, partBeforeLastSlash, fetchData) {
+function genreFiltersController($stateParams, $state, partBeforeLastSlash, fetchData) {
     var that = this;
 
     this.selectedgenre = $stateParams.selectedgenre;
