@@ -4,7 +4,7 @@ A Mixcloud API wrapper built in with Ionic, Cordova and AngularJS.<br>
 http://intergalacdev.net63.net/ionic-angumix/www/
 
 <h4>.apk</h4>
-http://intergalacdev.net63.net/ionic-angumix/angumix.apk
+http://intergalacdev.net63.net/ionic-angumix/CordovaApp-debug.apk
 
 <h4>Installation Steps</h4>
 
